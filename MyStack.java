@@ -18,6 +18,10 @@ public class MyStack<T> {
 	public INode pop() {
 		return myLinkedList.pop();
 	}
+	
+	public INode enqueue(Node<Integer> myenqueueNode) {
+		return myLinkedList.enqueue(myenqueueNode);
+	}
 
 	public void printStack() {
 		myLinkedList.printMyNode();

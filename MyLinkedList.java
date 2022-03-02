@@ -45,6 +45,22 @@ public class MyLinkedList {
 		this.head = head.getNext();
 		return tempNode;
 	}
+	
+	public INode enqueue(INode enque_node) {
+		INode tempNode;
+		if (this.head == null) {
+			this.head = enque_node;
+		}
+		if (this.tail == null) {
+			this.tail = enque_node;
+		} else {
+			tempNode = this.tail;
+			tempNode.setNext(enque_node);
+			this.tail = enque_node;
+		}
+		return null;
+	}
+
 
 	public void printMyNode() {
 		System.out.println(head);
