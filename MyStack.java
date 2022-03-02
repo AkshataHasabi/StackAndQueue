@@ -22,6 +22,10 @@ public class MyStack<T> {
 	public INode enqueue(Node<Integer> myenqueueNode) {
 		return myLinkedList.enqueue(myenqueueNode);
 	}
+	
+	public INode dequeue() {
+		return myLinkedList.dequeue();
+	}
 
 	public void printStack() {
 		myLinkedList.printMyNode();

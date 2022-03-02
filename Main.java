@@ -7,6 +7,7 @@ public class Main {
 		 main.given3NumberWhenAddedToStackShouldHaveLastAddedNode();
 		 main.given3NumberInStackWhenPopedShouldMatchWithLastAddedNode();
 		 main.enQueueElement();
+		 main.deQueueElement();
 	}
 	
 	public void given3NumberWhenAddedToStackShouldHaveLastAddedNode() {
@@ -34,6 +35,23 @@ public class Main {
 		myStack.push(myThirdNode);
 		
 		INode peak = myStack.peek();
+		myStack.printStack();
+	}
+	
+	public void deQueueElement() {
+		MyStack myStack = new MyStack();
+		Node<Integer> myFirstNode = new Node<>(56);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(70);
+
+		myStack.enqueue(myFirstNode);
+		myStack.enqueue(mySecondNode);
+		myStack.enqueue(myThirdNode);
+		myStack.printStack();
+
+		myStack.dequeue();
+		myStack.printStack();
+		myStack.dequeue();
 		myStack.printStack();
 	}
 	

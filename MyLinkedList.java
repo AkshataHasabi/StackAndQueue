@@ -3,6 +3,7 @@ package com.bridgelab.linkedlist;
 public class MyLinkedList {
 	public INode head;
 	public INode tail;
+	
 
 	public MyLinkedList() {
 		this.head = null;
@@ -61,6 +62,11 @@ public class MyLinkedList {
 		return null;
 	}
 
+	public INode dequeue() {
+		INode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+	}
 
 	public void printMyNode() {
 		System.out.println(head);
