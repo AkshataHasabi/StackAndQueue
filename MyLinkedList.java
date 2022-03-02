@@ -21,6 +21,24 @@ public class MyLinkedList {
 			this.head.setNext(tempNode);
 		}
 	}
+	
+	public boolean isEmpty() {
+		return head==null;
+	}
+	
+	public INode peek() {
+		if(isEmpty()) {
+			System.out.println("the stack is empty");
+			System.exit(-1);
+		}else {
+			INode temp=this.tail;
+			if(this.head==this.tail) {
+				this.tail=null;
+				this.head=null;
+			}
+		}
+		return tail;
+	}
 
 	public INode pop() {
 		INode tempNode = this.head;

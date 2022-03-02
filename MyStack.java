@@ -10,6 +10,14 @@ public class MyStack<T> {
 	public void push(INode myNode) {
 		myLinkedList.add(myNode);
 	}
+	
+	public INode peek() {
+		return myLinkedList.peek();
+	}
+
+	public INode pop() {
+		return myLinkedList.pop();
+	}
 
 	public void printStack() {
 		myLinkedList.printMyNode();
